@@ -1,7 +1,8 @@
 __author__ = 'jhonjairoroa87'
 
 import os
-from flask import Flask, request, jsonify
+from flask import Flask, request
+from flask.ext.jsonpify import jsonify
 
 app = Flask(__name__)
 
