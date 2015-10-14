@@ -19,7 +19,7 @@ def add():
         second_number = int(request.args.get('b'))
         return jsonify({'result': first_number + second_number})
     except Exception as e:
-        return "There was an error" + str(e)
+        return jsonify({'result': "There was an error" + str(e)})
 
 
 @app.route("/subtract")
@@ -29,7 +29,7 @@ def subtract():
         second_number = int(request.args.get('b'))
         return jsonify({'result': first_number - second_number})
     except Exception as e:
-        return "There was an error" + str(e)
+        return jsonify({'result': "There was an error" + str(e)})
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
